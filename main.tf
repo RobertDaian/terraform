@@ -1,13 +1,16 @@
 provider "aws" {
     version = "~>2.0"
     region = "us-east-1"
-
+    access_key = "${var.acess-keys["acess-key"]}"
+    secret_key = "${var.acess-keys["secret-key"]}" 
 }
 
 provider "aws" {
     alias = "us-east-2"
     version = "~>2.0"
     region = "us-east-2"
+    access_key = "${var.acess-keys["acess-key"]}"
+    secret_key = "${var.acess-keys["secret-key"]}"    
 
 }
 
@@ -19,6 +22,7 @@ resource "aws_instance" "dev" {
     
         tags = {
       Name = "dev${count.index}"
+      
     }
     vpc_security_group_ids = ["${aws_security_group.acesso-ssh.id}"]
 }

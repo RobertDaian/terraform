@@ -53,7 +53,7 @@ resource "aws_instance" "dev6" {
     provider = "aws.us-east-2"
     ami = "${var.amis["us-east-2"]}"
     instance_type = "t2.micro"
-    key_name = "${var.key_name}"
+    key_name = "chave-instancia-ohio"
         tags = {
       Name = "dev6"
     }
@@ -65,7 +65,7 @@ resource "aws_instance" "dev7"{
     provider = "aws.us-east-2"
     ami = "${var.amis["us-east-2"]}"
     instance_type = "t2.micro"
-    key_name = "${var.key_name}"
+    key_name = "chave-instancia-ohio"
     
       tags = {
         Name = "dev7"  

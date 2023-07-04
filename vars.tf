@@ -18,6 +18,6 @@ variable "cdirs_acesso_remoto" {
 
 variable "key_name" {
 
-  default = "terraform-aws"
+  default = "chave-instancia"
   
 }
